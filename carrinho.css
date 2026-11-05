@@ -1,1 +1,76 @@
-#modal-cart .modal-header{outline:3px solid lime!important}
+/* Carrinho lateral da Doce Lar — servido por jsDelivr e importado no topo do CSS global */
+
+/* Gaveta */
+#modal-cart .modal-form{display:flex;flex-direction:column;height:100%;background:#F5F7FB}
+#modal-cart.modal-show{box-shadow:-12px 0 40px rgba(10,27,92,.25)}
+
+/* Cabeçalho: ícone de carrinho + "Meu carrinho" */
+#modal-cart .modal-header{display:flex;align-items:center;justify-content:space-between;flex:none;min-height:64px;padding:0 12px 0 20px;background:var(--dl-grad)!important;color:#fff}
+#modal-cart .modal-title{display:flex;align-items:center;gap:10px;font-size:0!important;color:#fff!important}
+#modal-cart .modal-title::before{content:"";width:28px;height:28px;background:#fff;-webkit-mask:var(--dl-cart-ico) center/contain no-repeat;mask:var(--dl-cart-ico) center/contain no-repeat}
+#modal-cart .modal-title::after{content:"Meu carrinho";font-size:20px;font-weight:800;letter-spacing:.01em}
+#modal-cart{--dl-cart-ico:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 3h3l2.6 12.2a1 1 0 0 0 1 .8h9.6a1 1 0 0 0 1-.8L21 7H6'/><circle cx='9.5' cy='20' r='1.5'/><circle cx='17.5' cy='20' r='1.5'/></svg>")}
+#modal-cart .modal-close{display:grid;place-items:center;width:44px;height:44px;padding:0;border-radius:50%;transition:background .2s,transform .3s}
+#modal-cart .modal-close:hover{background:rgba(255,255,255,.15);transform:rotate(90deg)}
+#modal-cart .modal-close svg{width:24px;height:24px;fill:#fff!important}
+
+/* Corpo: lista rola, resumo fica preso embaixo */
+#modal-cart .modal-body{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;padding:0!important;overflow-y:auto}
+#modal-cart .js-ajax-cart-list{padding:16px 16px 4px}
+#modal-cart .js-empty-ajax-cart .alert{margin:16px;border:0;border-radius:16px;background:#fff;color:var(--dl-ink);font-weight:600;text-align:center;padding:24px 16px;box-shadow:0 2px 12px rgba(10,27,92,.07)}
+
+/* Cartão de cada item */
+#modal-cart .cart-item{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start;margin:0 0 12px!important;padding:16px!important;border:1px solid #EEF0F5!important;border-radius:16px;background:#fff;box-shadow:0 2px 12px rgba(10,27,92,.07);--t:translateY(12px);animation:dl-in .4s ease both}
+#modal-cart .cart-item:nth-child(n+3){animation-delay:.06s}
+#modal-cart .cart-item:nth-child(n+5){animation-delay:.12s}
+#modal-cart .cart-item-image-container{width:72px!important;height:72px;border-radius:12px;overflow:hidden;background:#fff;display:grid;place-items:center}
+#modal-cart .cart-item-image-container a{display:contents}
+#modal-cart .cart-item-image{position:static!important;width:100%!important;height:100%!important;object-fit:contain}
+#modal-cart .cart-item-info-container{display:grid;gap:14px;min-width:0}
+#modal-cart .cart-item-product-info{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start}
+#modal-cart .cart-item-name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--dl-ink)!important;font-size:15px;font-weight:700;line-height:1.35;text-decoration:none}
+#modal-cart .cart-item-variant{display:block;margin-top:2px;color:#6B7280;font-size:13px}
+
+/* X vermelho no lugar de "Remover" */
+#modal-cart .cart-item-delete-button{display:block;width:32px;height:32px;margin:-6px -6px 0 0;padding:0!important;border-radius:50%!important;font-size:0!important;color:transparent!important;background:center/18px no-repeat url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E3262F' stroke-width='2.6' stroke-linecap='round'><path d='M5 5l14 14M19 5L5 19'/></svg>")!important;transition:background-color .2s,transform .2s}
+#modal-cart .cart-item-delete-button:hover{background-color:#FFF1F1!important;transform:rotate(90deg)}
+
+/* Quantidade + preço */
+#modal-cart .cart-item-totals-container{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+#modal-cart .form-quantity{width:120px;height:44px;margin:0;border:1px solid #C9CDD6!important;border-radius:8px!important;background:#fff;overflow:hidden}
+#modal-cart .form-quantity .grid{height:100%;grid-template-columns:40px 1fr 40px}
+#modal-cart .cart-quantity-btn{display:grid;place-items:center;height:100%;padding:0!important;border-radius:0!important;box-shadow:none!important;transition:background .2s}
+#modal-cart .cart-quantity-btn:hover{background:#FFF1F1!important}
+#modal-cart .cart-quantity-btn svg{width:16px;height:16px}
+#modal-cart .js-cart-quantity-minus svg{fill:#9AA0AC!important}
+#modal-cart .js-cart-quantity-plus svg{fill:var(--dl-red)!important}
+#modal-cart .cart-quantity-input{border:0!important;box-shadow:none!important;background:transparent!important;font-size:16px!important;font-weight:600;text-align:center;color:var(--dl-ink)}
+#modal-cart .cart-item-subtotal{text-align:right;line-height:1.2}
+#modal-cart .cart-compare-price-container{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-bottom:4px}
+#modal-cart .cart-item-discount-badge{padding:2px 6px;border-radius:6px;background:#E3F7EE;color:var(--dl-green);font-size:11px;font-weight:800}
+#modal-cart .price-compare{color:#6B7280;font-size:14px;text-decoration:line-through}
+#modal-cart .js-cart-item-subtotal{color:var(--dl-ink);font-size:18px;font-weight:800;white-space:nowrap}
+
+/* Resumo preso no rodapé da gaveta */
+#modal-cart .cart-row{position:sticky;bottom:0;margin-top:auto;padding:16px 16px calc(16px + env(safe-area-inset-bottom));background:#fff;border-radius:20px 20px 0 0;box-shadow:0 -8px 24px rgba(10,27,92,.1)}
+#modal-cart .cart-summary-free-shipping-bar{margin-bottom:12px}
+#modal-cart .cart-totals-subtotal{display:none!important}
+#modal-cart .cart-totals-promotions{font-size:14px;color:var(--dl-green)}
+#modal-cart .cart-totals-total{display:flex!important;align-items:baseline;justify-content:space-between;margin:0;color:var(--dl-ink)}
+#modal-cart .cart-totals-total span:first-child{font-size:0}
+#modal-cart .cart-totals-total span:first-child::after{content:"Total";font-size:20px;font-weight:800}
+#modal-cart .js-cart-total{font-size:24px;font-weight:800}
+#modal-cart .cart-totals-payment-info{display:block;margin-top:8px;padding:8px 12px;border-radius:12px;background:#E3F7EE;color:var(--dl-green)!important;font-size:15px;font-weight:800;text-align:center}
+#modal-cart .cart-totals-payment-info span{color:inherit!important}
+
+/* Botão "Continuar" (vai para o checkout) */
+#modal-cart #ajax-cart-submit-div{position:relative;margin-top:14px}
+#modal-cart #ajax-cart-submit-div .btn{height:54px;border-radius:8px!important;color:transparent!important;font-size:0!important}
+#modal-cart #ajax-cart-submit-div::after{content:"Continuar";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:18px;font-weight:800;pointer-events:none;transition:transform .2s}
+#modal-cart #ajax-cart-submit-div:hover::after{transform:translateY(-2px)}
+
+/* Botão "Continuar comprando" (fecha a gaveta) */
+#modal-cart .cart-continue-shopping{margin-top:10px}
+#modal-cart .cart-continue-shopping .btn{position:relative;display:block;width:100%;height:54px;padding:0!important;border:1.5px solid var(--dl-red)!important;border-radius:8px!important;background:#fff!important;color:transparent!important;font-size:0!important;text-decoration:none!important}
+#modal-cart .cart-continue-shopping .btn::after{content:"Continuar comprando";position:absolute;inset:0;display:grid;place-items:center;color:var(--dl-red);font-size:17px;font-weight:800}
+#modal-cart .cart-continue-shopping .btn:hover{background:#FFF1F1!important}
