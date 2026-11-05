@@ -85,3 +85,33 @@ form .js-addtocart-placeholder .js-addtocart-success.active{display:flex!importa
 form .js-addtocart-placeholder .js-addtocart-success.active::before{content:"";flex:none;width:18px;height:18px;margin:0;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat}
 form .js-addtocart-placeholder .js-addtocart-success.active::after{content:"No carrinho";font-size:14px;font-weight:700;line-height:1.5}
 .buy-button-container .js-addtocart-placeholder .js-addtocart-success.active::after{font-size:16px}
+
+/* Precos no padrao do card: Pix em destaque + parcelas (script em externo/carrinho-precos.js) */
+#modal-cart .cart-totals-total{display:none!important}
+#modal-cart .cart-totals-payment-info{display:flex!important;align-items:baseline;gap:5px;margin:0;padding:0;border-radius:0;background:none;color:var(--dl-gray)!important;font-size:14px;font-weight:600;text-align:left}
+#modal-cart .cart-totals-payment-info::before{content:"Total";margin-right:auto;color:var(--dl-ink);font-size:20px;font-weight:800}
+#modal-cart .cart-totals-payment-info>span:nth-child(1),#modal-cart .cart-totals-payment-info>span:nth-child(3){display:none}
+#modal-cart .cart-totals-payment-info .js-payment-discount-price-cart{color:var(--dl-ink)!important;font-size:24px;font-weight:800}
+#modal-cart .cart-totals-payment-info .js-payment-discount-name-cart::before{content:"no "}
+#modal-cart .js-cart-total-container>.dl-inst{margin-top:2px;color:var(--dl-gray);font-size:13px;text-align:right}
+#modal-cart .cart-item-subtotal .js-cart-item-subtotal{display:none}
+#modal-cart .cart-item-totals-container{flex-wrap:wrap;align-items:center;gap:10px}
+#modal-cart .cart-item-subtotal{order:-1;flex:1 1 100%;text-align:left}
+#modal-cart .cart-item-subtotal .cart-compare-price-container{justify-content:flex-start}
+#modal-cart .cart-item-subtotal .dl-pix{color:var(--dl-ink);font-size:18px;font-weight:800;white-space:nowrap}
+#modal-cart .dl-pix small,.notification-cart-container .dl-pix small{color:var(--dl-gray);font-size:12px;font-weight:600}
+#modal-cart .cart-item-subtotal .dl-inst{margin-top:2px;color:var(--dl-gray);font-size:11px;white-space:nowrap}
+#modal-cart .cart-item-discount-badge,.notification-cart-container .notification-cart-discount-badge{padding:2px 8px;border-radius:999px;background:linear-gradient(135deg,#16C172,var(--dl-green))!important;color:#fff!important;font-size:11px;font-weight:800}
+#modal-cart .cart-item-label{display:flex;align-items:center;gap:4px;margin-top:4px;color:var(--dl-green)!important;font-size:13px;font-weight:600}
+#modal-cart .cart-item-label svg{fill:var(--dl-green)!important;color:var(--dl-green)!important}
+
+/* Pop-up "Adicionado ao carrinho" */
+.notification-cart-container .js-cart-notification-item-name-private{color:var(--dl-ink);font-weight:700}
+.notification-cart-container .dl-line{display:flex!important;flex-wrap:wrap;align-items:center;gap:6px;margin-top:4px;color:var(--dl-gray)}
+.notification-cart-container .dl-line .js-cart-notification-item-price-private{display:none}
+.notification-cart-container .dl-line>span:first-child{order:1}
+.notification-cart-container .dl-line .dl-pix{order:2;color:var(--dl-ink);font-size:16px;font-weight:800}
+.notification-cart-container .dl-line .notification-cart-discount-label{order:3}
+.notification-cart-container .notification-cart-discount-label{background:none!important;padding:0!important}
+.notification-cart-container .dl-ver-carrinho{display:block;margin-top:12px;padding:10px 16px;border-radius:8px;background:var(--dl-red);color:#fff!important;font-size:14px;font-weight:800;text-align:center;text-decoration:none!important;transition:background .2s}
+.notification-cart-container .dl-ver-carrinho:hover{background:#C81E27}
