@@ -271,3 +271,7 @@ form .js-addtocart-placeholder .js-addtocart-success.active::after{content:"No c
 #ns-section-footer .footer-newsletter-title{align-items:flex-start}
 #ns-section-footer .footer-legal-container{grid-area:3/1/4/4;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
 }
+/* Fundo cinza estilo Magalu: pagina cinza, blocos de produtos em paineis brancos */
+body{background:#EEF1F5!important}
+.section-featured-home .container,#single-product>.container{background:#fff;border-radius:16px;max-width:1268px;width:calc(100% - 32px);margin-inline:auto;padding:20px 16px!important}
+#single-product>.container{margin-top:16px}
