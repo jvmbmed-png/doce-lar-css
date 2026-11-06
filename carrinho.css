@@ -144,3 +144,9 @@ form .js-addtocart-placeholder .js-addtocart-success.active::after{content:"No c
 .head-main .nav-desktop .desktop-dropdown .nav-list-link{display:block;padding:9px 0!important;color:var(--dl-ink)!important;font-size:14px;font-weight:600;text-transform:none;transition:color .2s,transform .2s}
 .head-main .nav-desktop .desktop-dropdown .nav-list-link:hover{color:var(--dl-red)!important;transform:translateX(4px)}
 }
+@media (min-width:768px){
+.head-main .nav-desktop .nav-main-item>.nav-list-link{justify-content:flex-start!important}
+.head-main .nav-desktop .nav-main-item>.nav-list-link svg{margin-left:auto}
+.head-main .nav-desktop .desktop-dropdown .nav-list-link{display:flex;align-items:center}
+.head-main .nav-desktop .nav-main-item .nav-list-link:not(.nav-list-link-featured)::before{content:"";width:6px;height:26px;border-radius:4px;background:var(--dl-red);flex:none;margin-right:12px}
+}
