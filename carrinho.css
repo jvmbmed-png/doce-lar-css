@@ -212,16 +212,25 @@ form .js-addtocart-placeholder .js-addtocart-success.active::after{content:"No c
 .modal-nav-hamburger.modal-left{--x:-100%}
 @media (min-width:768px){.modal-md-docked-left{--x:-100%}.modal-md-docked-right{--x:100%}}
 #modal-cart.modal-show,.modal-nav-hamburger.modal-show{animation:dl-menu .35s cubic-bezier(.22,.9,.3,1) both!important}
-@media (prefers-reduced-motion:no-preference){
 #modal-cart:not(.modal-show):not([style*="none"]),.modal-nav-hamburger:not(.modal-show):not([style*="none"]){transform:none;--o:1;--t:translateX(var(--x));animation:dl-in .3s cubic-bezier(.25,1,.5,1) reverse both!important}
-}
-@media (prefers-reduced-motion:no-preference) and (min-width:768px){
+@media (min-width:768px){
 #modal-cart.modal-md-docked-right:not(.modal-show):not([style*="none"]){right:0}
 .modal-nav-hamburger.modal-md-docked-left:not(.modal-show):not([style*="none"]){left:0}
-}
-@media (min-width:768px){
-.nav-desktop-secondary ul{opacity:0;transform:translateY(-8px);transition:opacity .2s ease .15s,transform .2s ease .15s,visibility 0s linear .35s}
-.nav-desktop-secondary:hover ul,.nav-desktop-secondary:focus-within ul{opacity:1;transform:none;transition-delay:0s}
+.nav-desktop-secondary ul{top:calc(100% + 8px)!important;border-radius:14px!important;opacity:0;transform:translateY(-8px);transition:opacity .2s ease .15s,transform .2s ease .15s,visibility 0s linear .35s!important}
+.nav-desktop-secondary ul::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:10px}
+.nav-desktop-secondary:hover ul,.nav-desktop-secondary:focus-within ul{opacity:1;transform:none;transition-delay:0s!important}
 .head-main .header-account .nav-dropdown-content{transform:translateY(-8px);transition:opacity .2s ease .15s,transform .2s ease .15s,visibility 0s linear .35s!important}
 .head-main .header-account:hover .nav-dropdown-content,.head-main .header-account:focus-within .nav-dropdown-content{visibility:visible;opacity:1;pointer-events:auto;transform:none;transition-delay:0s!important}
+}
+/* card de produto: hover */
+.js-products-list-swiper{padding-bottom:14px!important}
+.product-item.js-item-product{transition:transform .35s cubic-bezier(.22,.9,.3,1),box-shadow .35s ease,border-color .35s ease!important}
+.product-item .product-item-image{transition:scale .6s cubic-bezier(.22,.9,.3,1)!important}
+.product-item .product-item-name{transition:color .25s ease!important}
+.product-item .product-item-quick-shop-container .btn{transition:background-color .25s ease,box-shadow .25s ease,transform .25s ease!important}
+@media (hover:hover){
+.product-item.js-item-product:hover{transform:translateY(-5px);border-color:rgba(227,38,47,.35)!important;box-shadow:0 14px 30px rgba(10,27,92,.14),0 2px 6px rgba(10,27,92,.06)!important}
+.product-item.js-item-product:hover .product-item-image{scale:1.08}
+.product-item.js-item-product:hover .product-item-name{color:var(--dl-red)!important}
+.product-item.js-item-product:hover .product-item-quick-shop-container .btn{box-shadow:0 6px 14px rgba(227,38,47,.3)!important}
 }
