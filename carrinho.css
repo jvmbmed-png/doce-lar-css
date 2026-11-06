@@ -234,3 +234,15 @@ form .js-addtocart-placeholder .js-addtocart-success.active::after{content:"No c
 .product-item.js-item-product:hover .product-item-name{color:var(--dl-red)!important}
 .product-item.js-item-product:hover .product-item-quick-shop-container .btn{box-shadow:0 6px 14px rgba(227,38,47,.3)!important}
 }
+
+/* X da barra lateral centralizado no circulo */
+.modal-nav-hamburger .modal-close{padding:0!important;box-sizing:border-box!important;width:36px!important;height:36px!important;display:grid!important;place-items:center!important;line-height:0!important}
+.modal-nav-hamburger .modal-close svg,.modal-nav-hamburger .modal-close-icon{width:18px!important;height:18px!important;margin:0!important;display:block!important}
+
+/* Aviso de cookies: cartao arredondado + botao grande */
+.js-notification-cookie-private.notification-fixed-bottom{left:12px!important;right:12px!important;bottom:12px!important;width:auto!important;max-width:520px;margin:0 auto!important;box-sizing:border-box;display:flex!important;flex-direction:column;align-items:stretch;gap:12px;padding:16px!important;background:#fff!important;border:1px solid var(--dl-line,#E4E8F2)!important;border-radius:16px!important;box-shadow:0 10px 30px rgba(15,23,42,.18)!important;text-align:left!important}
+.js-notification-cookie-private[style*="none"]{display:none!important}
+.js-notification-cookie-private .notification-message{font-size:14px;line-height:1.45;color:var(--dl-ink,#14172B)}
+.js-notification-cookie-private .notification-accept-btn{display:block!important;width:100%!important;min-height:46px!important;margin:0!important;padding:12px 20px!important;border:0!important;border-radius:10px!important;background:#E3262F!important;color:#fff!important;font-size:15px!important;font-weight:700!important;text-decoration:none!important;cursor:pointer;transition:background .2s!important}
+.js-notification-cookie-private .notification-accept-btn:hover{background:#C81E27!important}
+@media (min-width:768px){.js-notification-cookie-private.notification-fixed-bottom{flex-direction:row;align-items:center;right:auto!important;left:24px!important;bottom:24px!important;margin:0!important;gap:16px;padding:16px 16px 16px 20px!important}.js-notification-cookie-private .notification-accept-btn{width:auto!important;flex:none;min-width:130px}}
