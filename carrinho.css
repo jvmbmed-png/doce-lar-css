@@ -250,3 +250,8 @@ form .js-addtocart-placeholder .js-addtocart-success.active::after{content:"No c
 .notification-cart-container .notification::before{display:none!important}
 .notification-cart-container .dl-line{flex-wrap:nowrap!important;white-space:nowrap;margin-right:-28px}
 @media (max-width:767px){.notification-cart-container .dl-line{gap:5px}.notification-cart-container .dl-line .dl-pix{font-size:15px}.notification-cart-container .dl-line .dl-pix small{font-size:11px}.notification-cart-container .dl-line .notification-cart-discount-badge{padding:2px 6px;font-size:10px}}
+/* menu de categorias em 2 colunas */
+@media (min-width:1100px){
+.head-main .nav-desktop .js-nav-desktop-list{display:block!important;columns:2;column-gap:0;width:540px}
+.head-main .nav-desktop .nav-main-item{break-inside:avoid}
+}
