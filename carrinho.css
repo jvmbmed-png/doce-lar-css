@@ -275,3 +275,4 @@ form .js-addtocart-placeholder .js-addtocart-success.active::after{content:"No c
 body{background:#EEF1F5!important}
 .section-featured-home .container,#single-product>.container{background:#fff;border-radius:16px;max-width:1268px;width:calc(100% - 32px);margin-inline:auto;padding:20px 16px!important}
 #single-product>.container{margin-top:16px}
+@media (max-width:767px){.section-featured-home .container{padding-inline:8px!important}.product-item-payment-discount{flex-wrap:wrap;column-gap:4px}.product-item-payment-discount .payment-discount-price-product{font-size:16px!important;white-space:nowrap}.product-item-payment-discount .js-payment-discount-name-product{white-space:nowrap}}
