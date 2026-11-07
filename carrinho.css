@@ -276,3 +276,75 @@ body{background:#EEF1F5!important}
 .section-featured-home .container,#single-product>.container{background:#fff;border-radius:16px;max-width:1268px;width:calc(100% - 32px);margin-inline:auto;padding:20px 16px!important}
 #single-product>.container{margin-top:16px}
 @media (max-width:767px){.section-featured-home .container{padding-inline:8px!important}.product-item-payment-discount{flex-wrap:wrap;column-gap:4px}.product-item-payment-discount .payment-discount-price-product{font-size:16px!important;white-space:nowrap}.product-item-payment-discount .js-payment-discount-name-product{white-space:nowrap}}
+/* Paginas de conta: Entrar, Criar conta, Minha conta e pedidos */
+main:has(.account-form-container,.account-page-content,.order-detail) .page-header{padding:24px 0 16px!important}
+main:has(.account-form-container,.account-page-content,.order-detail) .breadcrumbs{color:#6B7280;opacity:1;font-size:13px}
+main:has(.account-form-container,.account-page-content,.order-detail) .page-header-title{font-size:28px!important;font-weight:800;color:#0F172A;letter-spacing:-.02em}
+main:has(.account-form-container) .page-header-title-row,main:has(.account-form-container) .page-header-title-inner{justify-items:center;justify-content:center;text-align:center}
+main:has(.account-form-container) .breadcrumbs{justify-content:center}
+.account-form-container{max-width:440px;margin:0 auto 48px!important;padding:24px 16px;background:#fff;border-radius:16px;box-shadow:0 1px 2px #0F172A0F,0 8px 24px #0F172A12}
+#ns-section-login_form .account-form-container::before,#ns-section-register_form .account-form-container::before{content:"Acompanhe seus pedidos\A Compre mais rápido\A Pix com desconto";display:block;white-space:pre-line;margin:-4px 0 20px;padding:12px 14px 12px 40px;font-size:14px;line-height:28px;font-weight:600;color:#0A1B5C;background:#F2F5FB url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='84' fill='none' stroke='%230E9F6E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 14l4 4 8-8M3 42l4 4 8-8M3 70l4 4 8-8'/%3E%3C/svg%3E") 14px 12px no-repeat;border-radius:12px}
+.account-form-subtitle{margin:0 0 16px!important;font-size:14px;color:#4B5563;text-align:center}
+.account-form-container .form-group{position:relative;margin-bottom:16px}
+.account-form-container .form-label{margin-bottom:6px;font-size:14px;font-weight:600;color:#1F2937}
+.account-form-container .form-control{height:48px;padding:0 44px 0 14px;color:#0F172A!important;background:#fff!important;border:1px solid #C9CDD6!important;border-radius:8px!important;box-shadow:none;transition:border-color .15s,box-shadow .15s!important}
+.account-form-container .form-control::placeholder{color:#9CA3AF}
+.account-form-container .form-control:hover{border-color:#9CA3AF!important}
+.account-form-container .form-control:focus{border-color:#E3262F!important;box-shadow:0 0 0 3px #E3262F26!important;outline:0}
+.account-form-container .password-toggle{position:absolute;top:23px;transform:none!important;transition:none!important;right:4px;height:48px;width:40px;padding:0;display:grid;place-items:center;border:0;background:none;color:#6B7280}
+.login-password-help{margin-top:8px;text-align:right}
+.account-form-container .btn-link{color:#0B3FD1;font-weight:600;text-decoration:none}
+.account-form-container .btn-link:hover{text-decoration:underline}
+.account-form-container .btn-primary,.account-orders-empty-cta,.account-page-content .btn-primary{height:52px;padding:0 24px;font-size:16px;font-weight:700;color:#fff!important;background:#E3262F!important;background-image:none!important;border:0!important;border-radius:8px!important;box-shadow:0 4px 12px #E3262F33;transition:background .15s,transform .15s!important}
+.account-form-container .btn-primary:hover,.account-orders-empty-cta:hover,.account-page-content .btn-primary:hover{background:#C81E27!important}
+.account-form-container .btn-primary:active{transform:translateY(1px)}
+.account-form-container .btn-primary[disabled]{opacity:.55;box-shadow:none}
+.account-form-container .g-recaptcha{display:flex;justify-content:center;margin:4px 0 16px}
+.form-login-help{margin-top:20px;padding-top:18px;border-top:1px solid #E5E7EB;font-size:14px;color:#4B5563;text-align:center}
+.account-form-container .alert{padding:12px 14px;font-size:14px;text-align:left;border:0;border-left:4px solid;border-radius:8px}
+.account-form-container .alert-danger{color:#B91C1C;background:#FEF2F2}
+.account-form-container .alert-success{color:#047857;background:#ECFDF5}
+/* Minha conta */
+.account-page-content{display:grid!important;gap:16px;margin-bottom:48px}
+.account-orders-sidebar,.account-page-content>[data-store=account-orders]{margin:0;padding:24px;background:#fff;border-radius:16px;box-shadow:0 1px 2px #0F172A0F,0 8px 24px #0F172A12}
+.account-section-header{margin-bottom:12px}
+.account-section-title,.account-orders-heading{font-size:18px!important;font-weight:800;color:#0F172A}
+.account-page-content .btn-link{color:#0B3FD1;font-size:14px;font-weight:600;text-decoration:none}
+.account-info-details{margin-bottom:16px;font-size:15px;color:#374151}
+.account-info-line{margin-bottom:6px;overflow-wrap:anywhere}
+.account-info-line:first-child{font-weight:700;color:#0F172A}
+.account-logout-container{margin:0;padding-top:16px;border-top:1px solid #E5E7EB}
+.account-page-content .account-logout-link{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;color:#B80F1A;font-size:14px;font-weight:700;border:1px solid #F3C4C7;border-radius:8px;background:#FFF5F5}
+.account-page-content .account-logout-link:hover{background:#FDE8E9;text-decoration:none}
+.account-orders-empty{padding:24px 8px}
+.account-orders-empty svg{width:48px;height:48px;padding:14px;box-sizing:content-box;color:#E3262F;fill:currentColor;background:#FDECEC;border-radius:50%}
+.account-orders-empty-text{margin:14px 0 18px!important;font-size:16px;font-weight:600;color:#1F2937}
+.account-orders-empty-cta{display:inline-flex;align-items:center;justify-content:center;min-width:220px}
+.account-orders-grid{gap:12px}
+.account-order-card,.account-order-card .card{height:auto;margin:0;padding:0;background:#fff;border:1px solid #E3E6EC;border-radius:12px;overflow:hidden;align-items:stretch}
+.account-order-card .card-header{padding:14px 16px;background:#F7F8FA;border-bottom:1px solid #E3E6EC}
+.account-order-card .card-body{padding:16px}
+.account-order-card .card-footer{padding:0 16px 16px;border:0;background:none}
+.account-order-number{font-size:16px;font-weight:800;color:#0F172A}
+.account-order-date{font-size:13px;color:#6B7280}
+.account-order-status{flex-wrap:wrap;font-size:14px;color:#4B5563}
+.account-order-status-icon{color:#0A1B5C}
+.account-order-status-value{display:inline-block;padding:3px 10px;font-size:12px;font-weight:700;color:#0A1B5C;background:#E8EDFB;border-radius:999px}
+.account-order-total{margin:12px 0 0;font-size:18px;font-weight:800;color:#0F172A}
+.account-order-detail-link,.account-order-card .card-footer .btn{display:flex!important;align-items:center;justify-content:center;height:44px;margin:12px 0 0;font-size:14px;font-weight:700;color:#E3262F!important;text-decoration:none!important;border:1.5px solid #E3262F!important;border-radius:8px!important;background:#fff!important}
+.account-order-detail-link:hover,.account-order-card .card-footer .btn:hover{background:#FFF5F5!important}
+.account-order-card img{border-radius:8px}
+/* Detalhe do pedido */
+.order-detail-info,.order-detail-items-container,.order-totals-container{padding:20px;background:#fff;border-radius:16px;box-shadow:0 1px 2px #0F172A0F,0 8px 24px #0F172A12}
+.order-item{padding-bottom:12px;border-bottom:1px solid #E5E7EB}
+.order-item:last-child{border-bottom:0}
+.order-item-image-container{border-radius:8px;overflow:hidden;background:#F2F3F5}
+.order-item-image{object-fit:contain}
+.order-item-name{font-weight:600;color:#0F172A}
+.order-total,.order-totals-line:last-child{font-weight:800;color:#0F172A}
+@media (min-width:768px){
+.account-form-container{padding:32px}
+.account-page-content{grid-template-columns:320px minmax(0,1fr);align-items:start;gap:24px}
+.account-orders-sidebar{position:sticky;top:24px}
+.account-orders-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+}
