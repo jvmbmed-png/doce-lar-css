@@ -365,3 +365,16 @@ form .js-addtocart-placeholder .js-addtocart-success.active::before{width:24px!i
 #ns-section-icon_text #ns-block-item_1 .icon-text-item-icon{--dl-i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 6.5a1.5 1.5 0 0 1 1.5-1.5h9a1.5 1.5 0 0 1 1.5 1.5v10.5h-12z'/%3E%3Cpath d='M14.5 9h3.8l3.2 3.7V17h-7'/%3E%3Ccircle cx='7' cy='17.5' r='2.2' fill='%23000'/%3E%3Ccircle cx='17.5' cy='17.5' r='2.2' fill='%23000'/%3E%3C/svg%3E")}
 #ns-section-icon_text #ns-block-item_2 .icon-text-item-icon{--dl-i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2.5' y='5' width='19' height='14' rx='2.5'/%3E%3Cpath d='M2.5 10h19'/%3E%3Cpath d='M6 15h4'/%3E%3C/svg%3E")}
 #ns-section-icon_text #ns-block-item_4 .icon-text-item-icon{--dl-i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z'/%3E%3Cpath d='M9.2 8.6c-.2 1 .4 2.3 1.6 3.5s2.5 1.8 3.5 1.6l.9-1.2-1.9-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.9z'/%3E%3C/svg%3E")}
+/* Carrossel principal 16:9 (veio do Rodape para o head): ja nasce com 2,4 slides e setas fora, sem piscar */
+.js-slideshow.swiper-container{border-radius:0!important;box-shadow:none!important}
+.js-slideshow .swiper-slide{min-height:0!important;height:auto!important;aspect-ratio:16/9;border-radius:16px;overflow:hidden;box-shadow:none}
+.js-slideshow-container .container{position:relative}
+.js-slideshow-container .container>.js-swiper-slideshow-prev,.js-slideshow-container .container>.js-swiper-slideshow-next{position:absolute!important;z-index:5;width:40px!important;height:40px!important;margin:-20px 0 0!important;transform:none!important;top:var(--dl-sy,146px)!important}
+.js-slideshow-container .container>.js-swiper-slideshow-prev{left:-32px!important;right:auto!important}
+.js-slideshow-container .container>.js-swiper-slideshow-next{right:-32px!important;left:auto!important}
+.js-slideshow-container .container>.swiper-button-prev svg,.js-slideshow-container .container>.swiper-button-next svg{width:16px!important;height:16px!important}
+@media (max-width:767px){.js-slideshow-container .container>.js-swiper-slideshow-prev,.js-slideshow-container .container>.js-swiper-slideshow-next{display:none!important}}
+.js-slideshow .swiper-slide .media-visual,.js-slideshow .swiper-slide img{position:absolute!important;top:0;left:0;width:100%!important;height:100%!important;object-fit:cover}
+@media (max-width:767px){.js-slideshow .swiper-slide{border-radius:12px}}
+.js-slideshow .swiper-slide{flex-shrink:0;width:calc((100% - 1.2px)/1.12);margin-right:10px}
+@media (min-width:768px){.js-slideshow .swiper-slide{width:calc((100% - 22.4px)/2.4);margin-right:16px}.js-slideshow>.js-swiper-slideshow-prev,.js-slideshow>.js-swiper-slideshow-next{opacity:0!important}}
