@@ -356,8 +356,6 @@ form .js-addtocart-placeholder.disabled:not(:has(.js-addtocart-success.active)) 
 form .js-addtocart-placeholder.disabled:not(:has(.js-addtocart-success.active))::after{content:"";position:absolute;top:50%;left:50%;width:22px;height:22px;margin:-11px 0 0 -11px;box-sizing:border-box;border:3px solid #FFFFFF99;border-top-color:#6B7280;border-radius:50%;animation:dl-spin .7s linear infinite!important}
 form .js-addtocart-placeholder .js-addtocart-success.active::after{content:none!important}
 form .js-addtocart-placeholder .js-addtocart-success.active::before{width:24px!important;height:24px!important}
-/* Swiper: o reduzir-movimento do global zera transition e o transitionend nunca vem, o que trava as setas */
-.swiper-wrapper,.swiper-container .swiper-slide,.swiper .swiper-slide{transition-property:transform!important;transition-duration:.3s!important}
 /* Faixa Icone e texto: 4 icones proprios, centralizados no quadrado branco */
 #ns-section-icon_text .icon-text-item-icon{width:52px!important;min-width:52px!important;height:52px!important;border-radius:14px!important;display:grid!important;place-items:center!important;background:#fff!important;box-shadow:0 4px 12px #0A1B5C14!important}
 #ns-section-icon_text .icon-text-item-icon svg{display:none!important}
